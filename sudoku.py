@@ -139,6 +139,10 @@ class agent_sudoku:
 			self.c_play = 0
 		return (l, c, self.tabuleiro[l][c])
 
+	def zerar_casas(self):
+		self.c_play = 0
+		self.l_play = 0
+
 
 class game_sudoku:
 
@@ -229,6 +233,7 @@ while(x != 'N' and x != 'n'):
 		game.imprimir_tabuleiro()
 		time.sleep(1)
 
+	agente.zerar_casas()
 	x = input("Deseja iniciar o jogo?    S/N \n-> ")
 
 
